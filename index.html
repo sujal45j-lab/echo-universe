@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Echo - Your Digital Universe</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="shooting-stars"></div>
+    <section class="galaxy-game" id="galaxyGame">
+    <h2>🎮 Galaxy Mission Challenge</h2>
+    <p>30 सेकंदांत जास्तीत जास्त ⭐ Stars collect कर!</p>
+
+    <div class="game-info">
+        <span>⭐ Score: <strong id="gameScore">0</strong></span>
+        <span>⏱️ Time: <strong id="gameTime">30</strong></span>
+    </div>
+    <div class="high-score">
+    🏆 Best Score:
+    <strong id="highScore">0</strong>
+</div>
+
+    <div id="gameArea">
+        <button id="startGame">🚀 Start Mission</button>
+    </div>
+</section>
+
+    <button id="musicButton" onclick="toggleMusic()">
+    🔇 Music OFF
+</button>
+
+    <div class="stars"></div>
+    <section class="galaxy-3d">
+    <div class="galaxy-core"></div>
+
+    <div class="galaxy-arm arm1"></div>
+    <div class="galaxy-arm arm2"></div>
+    <div class="galaxy-arm arm3"></div>
+    <div class="galaxy-arm arm4"></div>
+</section>
+    <nav class="navbar">
+    <div class="logo">🌌 ECHO</div>
+
+    <div class="nav-links">
+        <a href="#home">Home</a>
+        <a href="#missions">Missions</a>
+        <a href="#memories">Memories</a>
+        <a href="#settings">Settings</a>
+    </div>
+</nav>
+<button id="themeButton" onclick="toggleTheme()">
+    🌙 Dark Mode
+</button>
+    <header>
+    <h1>🌌 ECHO</h1>
+    <p>Your Digital Universe</p>
+
+    <div class="profile">
+        <input type="text" id="username" placeholder="Enter your name">
+        <button onclick="saveName()">Save Name</button>
+    </div>
+
+    <div class="clock" id="clock">00:00:00</div>
+</header>
+
+    <main>
+    <section class="dashboard" id="home">
+
+    <h2>Welcome to Your Universe 👋</h2>
+
+    <p class="dashboard-subtitle">
+        Your dreams are waiting for you.
+    </p>
+
+    <div class="dashboard-cards">
+
+        <div class="dashboard-card">
+            <span>⭐</span>
+            <strong id="dashMissions">0</strong>
+            <small>MISSIONS</small>
+        </div>
+
+        <div class="dashboard-card">
+            <span>🏆</span>
+            <strong id="dashCompleted">0</strong>
+            <small>COMPLETED</small>
+        </div>
+
+        <div class="dashboard-card">
+            <span>✨</span>
+            <strong id="dashEnergy">0%</strong>
+            <small>ENERGY</small>
+        </div>
+
+    </div>
+
+    <button onclick="goToMissions()">
+        Continue Your Journey 🚀
+    </button>
+
+</section>    
+
+        <section class="hero">
+            <h2>Welcome to Your Universe</h2>
+            <p>Turn your memories, dreams and achievements into stars.</p>
+
+            <button onclick="startUniverse()">
+                Enter Universe 🚀
+            </button>
+        </section>
+
+        <section class="universe">
+
+            <div class="planet" onclick="showMessage('Memories')">
+                🪐
+                <span>Memories</span>
+            </div>
+
+            <div class="planet" onclick="showMessage('Dreams')">
+                🌎
+                <span>Dreams</span>
+            </div>
+
+            <div class="planet" onclick="showMessage('Projects')">
+                🔵
+                <span>Projects</span>
+            </div>
+
+            <div class="planet" onclick="showMessage('Achievements')">
+                🟣
+                <span>Achievements</span>
+            </div>
+
+        </section><div class="stats">
+    <div class="galaxy-status">
+    <span>✨ Universe Energy</span>
+    <strong id="energy">0%</strong>
+</div>        
+    <div class="stat-card">
+        <span id="missionCount">0</span>
+        <small>MISSIONS</small>
+    </div>
+
+    <div class="stat-card">
+        <span id="completedCount">0</span>
+        <small>COMPLETED</small>
+    </div>
+</div>
+
+        <div id="message"></div>
+        <section class="memories" id="memories">
+
+    <h2>📸 My Memories</h2>
+
+    <input type="file" id="memoryPhoto" accept="image/*">
+
+    <input
+        type="text"
+        id="memoryText"
+        placeholder="Write a memory..."
+    >
+
+    <button onclick="addMemory()">
+        Add Memory ✨
+    </button>
+
+    <div id="memoryList"></div>
+
+</section>
+        <div class="dream-box">
+
+    <h2>🚀 Create Your Mission</h2>
+
+    <input
+        type="text"
+        id="dreamInput"
+        placeholder="Enter your dream..."
+    >
+
+    <button onclick="addDream()">
+        Add Mission ⭐
+    </button>
+
+    <div id="dreamList"></div>
+
+</div>
+
+    </main>
+
+    <script src="script.js"></script>
+    <section id="settings" class="settings">
+    <h2>⚙️ Settings</h2>
+
+    <button onclick="toggleTheme()">
+        🌙 Dark / Light Mode
+    </button>
+
+    <button onclick="clearMissions()">
+        🗑️ Clear Missions
+    </button>
+
+    <button onclick="clearMemories()">
+        🗑️ Clear Memories
+    </button>
+</section>
+<script src="script.js"></script>
+
+</body>
+</html>
